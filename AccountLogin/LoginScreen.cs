@@ -19,8 +19,10 @@ namespace AccountLogin
 
         private void verifyAccount_Click(object sender, EventArgs e)
         {
+            //check if username and password inputted matches
             if (usernameInput.Text == Form1.user && passwordInput.Text == Form1.pass)
             {
+                //if matches, move to next screen and remove old form
                 Form f = this.FindForm();
                 f.Controls.Remove(this);
 
@@ -29,6 +31,7 @@ namespace AccountLogin
             }
             else
             {
+                //if username didn't match up, send error message
                 wrongInput.Text = "The information you have inputted is incorrect. Please check your username and password.";
             }
         }
